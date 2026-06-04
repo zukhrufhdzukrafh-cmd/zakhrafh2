@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>زخرفة</title>
+    <link rel="stylesheet" href="زخرفه.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">زخرفة</div>
+
+        <div class="logo-left-container">
+            <img src="images/sup logo.png" alt="شعار زخرفة العلوي" class="nav-logo">
+        </div>
+
+        <ul>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>أهلاً بك في <span>زخرفة</span></h1>
+            <p>
+               نبدع في تطريز الاسماء والشعارات بأعلى جودة,
+               ونصنع براند ملابس فاخر يجمع بين الأناقة والجودة،والأهتمام بأدق التفاصيل.
+            </p>
+            <button onclick="scrollToForm()">ابدأ طلبك الآن</button>
+        </div>
+
+        <div class="hero-image">
+            <img src="images/Logo.PNG" alt="الصورة الرئيسية">
+
+            <p style="
+                margin-top:20px;
+                font-size:26px;
+                font-weight:800;
+                color:#d4a24c;
+                text-shadow:0 2px 10px rgba(212,162,76,.25);
+            ">
+                كل قطعة تحكي قصة
+            </p>
+        </div>
+    </section>
+    <section class="portfolio">
+
+    <div class="portfolio-title">
+        <h2>أعمالنا السابقة</h2>
+        <p>نماذج حقيقية من أعمال زخرفة</p>
+    </div>
+<div class="stats">
+    <div>
+        <h3>+1300</h3>
+        <p>طلب منجز</p>
+    </div>
+
+    <div>
+        <h3>600</h3>
+        <p>تصميم مطرز</p>
+    </div>
+
+    <div>
+        <h3>94%</h3>
+        <p>رضا العملاء</p>
+    </div>
+</div>
+    <div class="portfolio-grid">
+
+        <div class="portfolio-card">
+            <img src="images/مواليد (1).JPG">
+            <div class="portfolio-overlay">
+               <h3>مواليد</h3>
+               <p>تطريز وتصاميم للمواليد</p>
+            </div>
+        </div>
+
+        <div class="portfolio-card">
+            <img src="images/شركات (1).JPG">
+            <div class="portfolio-overlay">
+                <h3>تصميم شركات</h3>
+                <p>تنفيذ احترافي</p>
+            </div>
+        </div>
+
+        <div class="portfolio-card">
+            <img src="images/تيشيرت وهودي (1).JPG">
+            <div class="portfolio-overlay">
+                <h3>هودي وتيشيرتات</h3>
+                <p>تطريز فاخر</p>
+            </div>
+        </div>
+
+        <div class="portfolio-card">
+            <img src="images/كابات (1).JPG">
+            <div class="portfolio-overlay">
+                <h3>تطريز كابات</h3>
+                <p>تصميم مميز</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<div class="instagram-box">
+    <h3>شاهد المزيد من أعمالنا</h3>
+
+    <p>زوروا حسابنا على الإنستقرام للاطلاع على أحدث التصاميم والتطريزات</p>
+
+    <a href="https://instagram.com/zu___k1"
+       target="_blank"
+       class="instagram-btn">
+       📷 زيارة الإنستقرام
+    </a>
+</div>
+    <section class="anime-showcase">
+
+    <div class="anime-title">
+        <h2>بلوفرات الأنمي</h2>
+        
+    </div>
+
+    <div class="anime-slider">
+        <div class="anime-slide"><img src="images/anime1.JPG"></div>
+        <div class="anime-slide"><img src="images/anime2.JPG"></div>
+        <div class="anime-slide"><img src="images/anime3.JPG"></div>
+        <div class="anime-slide"><img src="images/anime4.JPG"></div>
+        <div class="anime-slide"><img src="images/anime5.JPG"></div>
+    </div>
+
+</section>
+
+    <section class="steps">
+        <div class="step">
+            <div class="step-circle">1</div>
+            <h3>بياناتك</h3>
+            <p>ادخل اسمك ورقمك</p>
+        </div>
+
+        <div class="step">
+            <div class="step-circle">2</div>
+            <h3>اختر القسم</h3>
+            <p>حدد نوع التطريز</p>
+        </div>
+
+        <div class="step">
+            <div class="step-circle">3</div>
+            <h3>التفاصيل</h3>
+            <p>أدخل تفاصيل الطلب</p>
+        </div>
+
+        <div class="step">
+            <div class="step-circle">4</div>
+            <h3>إرسال</h3>
+            <p>إرسال الطلب عبر واتساب</p>
+        </div>
+    </section>
+
+    <section class="form-section">
+
+        <div class="card">
+            <h2>بياناتك</h2>
+
+            <input type="text" id="name" placeholder="الاسم الكامل" onkeyup="updateSummary()">
+
+            <input type="text" id="phone" placeholder="رقم الجوال" onkeyup="updateSummary()">
+
+            <select id="category" onchange="updateSummary(); showCategoryProducts()">
+                <option value="">اختر القسم</option>
+                <option value="جملة">جملة</option>
+                <option value="تجزئة">تجزئة</option>
+            </select>
+        </div>
+
+        <div class="card">
+
+            <h2>تفاصيل الطلب</h2>
+
+            <div id="productsBox" class="products"></div>
+
+            <div id="sizeContainer">
+            <input type="text" id="size" placeholder="المقاس" onkeyup="updateSummary()">
+            </div>
+
+            <select id="pickup" onchange="updateSummary()">
+
+                <option value="">اختر موقع الاستلام</option>
+
+                <option value="الحجاز القديم - محل نوري على الشارع الرئيسي">
+                    الحجاز القديم - محل نوري على الشارع الرئيسي
+                </option>
+
+                <option value="كريتر - الهناء مول محل ايفا الدور الارضي">
+                    كريتر - الهناء مول محل ايفا الدور الارضي
+                </option>
+
+                <option value="الشعب - مدينة عدن الجديدة ( الوالي ) معمل زخرفة">
+                    الشعب - مدينة عدن الجديدة ( الوالي ) معمل زخرفة
+                </option>
+
+            </select>
+
+            <textarea id="details" placeholder="اكتب تفاصيل الطلب" onkeyup="updateSummary()"></textarea>
+            <div class="delivery-note">
+              ✨ يتم تنفيذ الطلب خلال 3 إلى 5 أيام عمل، ونسعد بخدمتكم فور الانتهاء من التطريز وتجهيز الطلب.
+            </div>
+
+
+            <button class="btn" onclick="sendWhatsApp()">إرسال الطلب</button>
+
+        </div>
+
+        <div class="card">
+
+            <h2>ملخص الطلب</h2>
+
+            <div class="summary-item">
+                <span>الاسم</span>
+                <p id="summaryName">-</p>
+            </div>
+
+            <div class="summary-item">
+                <span>رقم الجوال</span>
+                <p id="summaryPhone">-</p>
+            </div>
+
+            <div class="summary-item">
+                <span>القسم</span>
+                <p id="summaryCategory">-</p>
+            </div>
+
+            <div class="summary-item">
+                <span>النوع</span>
+                <p id="summaryType">-</p>
+            </div>
+
+            <div class="summary-item">
+                <span>اللون</span>
+                <p id="summaryColor">-</p>
+            </div>
+
+            <div class="summary-item">
+                <span>المقاس</span>
+                <p id="summarySize">-</p>
+            </div>
+
+            <div class="summary-item">
+                <span>موقع الاستلام</span>
+                <p id="summaryPickup">-</p>
+            </div>
+
+            <div class="summary-item">
+                <span>التفاصيل</span>
+                <p id="summaryDetails">-</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="whatsapp">
+
+        <h2>إرسال مباشر عبر واتساب</h2>
+
+        <p>سيتم فتح الواتساب لإرسال طلبك مباشرة</p>
+
+        <button onclick="sendWhatsApp()">إرسال عبر واتساب</button>
+
+    </section>
+
+    <div id="customAlert" class="custom-alert">
+
+        <div class="alert-box">
+
+            <h2>📌 ملاحظة مهمة</h2>
+
+            <p>
+                لا تنسَ إرسال الصورة أو التصميم
+                الذي ترغب بتطريزه بعد إرسال الطلب ✨
+            </p>
+
+            <div class="alert-buttons">
+
+                <button onclick="continueWhatsApp()">متابعة</button>
+
+                <button class="cancel-btn" onclick="closeAlert()">إلغاء</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <h2>زخرفة</h2>
+    </footer>
+
+    <script src="زخرفه.js"></script>
+
+</body>
+
+</html>
